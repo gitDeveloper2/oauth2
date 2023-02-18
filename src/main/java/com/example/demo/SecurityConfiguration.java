@@ -54,7 +54,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                         @Override
                         public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
                             CustomOauthUser customOauthUser= (CustomOauthUser) authentication.getPrincipal();
-
+                            userRepo.save(new User(customOauthUser.getAttribute("name"),"password","github"));
                             System.out.println(customOauthUser.getAttributes());
                             System.out.println("sun");
                             response.sendRedirect("/");
