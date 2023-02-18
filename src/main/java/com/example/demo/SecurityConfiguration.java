@@ -24,6 +24,9 @@ import java.io.IOException;
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private CustomOauthService customOauthService;
+    @Autowired
+    private UserRepo userRepo;
+
 
 
     public CustomOauthService getCustomOauthService() {
