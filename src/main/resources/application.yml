@@ -6,4 +6,15 @@ spring:
           github:
             clientId: a14a43eb2f568112c1e4
             clientSecret: 2b425cef056e5dec0c845233c350513fece5d544
-# ...
+
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: #0Security
+    jpa:
+      database: mysql
+      hibernate.ddl-auto: update
+      generate-ddl: true
+      show-sql: true
+
